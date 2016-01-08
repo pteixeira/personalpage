@@ -8,6 +8,12 @@
   margin: 0;
   padding: 0; }
 
+/* mudar comportamento das boxes */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
 html, body {
   height: 100%; }
 
@@ -396,4 +402,34 @@ a:visited {
 
 /* Literal.Number.Integer.Long */
 body {
+  background: gray; }
+
+.page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .menu a.active {
+    background: red; }
+
+.site {
+  padding: 5px;
+  width: 900px;
+  margin: 50px auto;
   background: white; }
+
+.header img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid gray; }

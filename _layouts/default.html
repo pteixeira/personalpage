@@ -1,42 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
+  <div class="site">
+    <div class="header">
+      <img src="{{site.baseurl}}/assets/me.jpg" alt="Pedro's Picture">
+      <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+      <a class="extra" href="/">home</a>
+    </div>
+    <div class="page-content">
+      <div class="menu">
+        {% assign pages_list = site.pages %}
+        {% assign group = 'navigation' %}
+        {% include pages_list %}
+      </div>
 
-          {{ content }}
+<!--
+      <div class="menu">
+        <a href="{{site.baseurl}}/about" class="">About Me</a>
+        <a href="{{site.baseurl}}/experience" class="">Professional Experience</a>
+        <a href="{{site.baseurl}}/education" class="">Education</a>
+        <a href="{{site.baseurl}}/projects" class="">Projects</a>
+        <a href="{{site.baseurl}}/skills" class="">Technical Skills</a>
+        <a href="{{site.baseurl}}/contact" class="">Contact Me</a>
+      </div> -->
 
+      <div class="content">
+        {{ content }}
+      </div>
 
-          <div class="footer">
-            <div class="contact">
-              <p>
-                Your Name is<br />
-                What You Are<br />
-                you@example.com
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="footer">
+      <div class="contact">
+        <p>
+          Your Name is<br />
+          What You Are<br />
+          you@example.com
+        </p>
+      </div>
+      <div class="contact">
+        <p>
+          <a href="https://github.com/pteixeira">GitHub</a><br />
+          <a href="https://pt.linkedin.com/in/pedroapteixeira">LinkedIN</a><br />
+        </p>
+      </div>
+    </div>
+  </div>
 
-    </body>
+</body>
 </html>

@@ -2,5 +2,35 @@
 @import "syntax";
 
 body {
-    background: white;
+  background: gray;
 }
+
+.page-content {
+  display: flex;
+}
+
+.menu {
+  flex-direction: column;
+  display: flex;
+
+  a.active {
+    background: red;
+  }
+}
+
+.site {
+  padding: 5px;
+  width: 900px;
+  margin: 50px auto;
+  background: white;
+}
+
+.header {
+  img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+  }
+}
+
+
