@@ -1,9 +1,14 @@
 {% for node in pages_list %}
   {% if group == null or group == node.group %}
-    {% if page.url == node.url %}
-      <a href="{{site.baseurl}}{{node.url}}" class="active">{{node.title}}</a>
+    {% if node.weight == 0 %}
+      {% assign title = 'About Me' %}
     {% else %}
-      <a href="{{site.baseurl}}{{node.url}}">{{node.title}}</a>
+      {% assign title = node.title %}
+    {% endif %}
+    {% if page.url == node.url %}
+      <a href="{{site.baseurl}}{{node.url}}" class="active">{{title}}</a>
+    {% else %}
+      <a href="{{site.baseurl}}{{node.url}}">{{title}}</a>
     {% endif %}
   {% endif %}
 {% endfor %}
